@@ -10,28 +10,28 @@ passed_tests=0
 total_percentage=0
 
 # Ejecutar pruebas
-for input_file in ./TP4/tests/test_*.i; do
+for input_file in ./tests/test_*.i; do
     total_tests=$((total_tests + 1))
     test_name=$(basename ${input_file} .i)
-    output_file="./TP4/tests/output_${test_name}.txt"
-    expected_output="./TP4/tests/expected_outputs/expected_output_${test_name}.txt"
+    output_file="./tests/output_${test_name}.txt"
+    expected_output="./tests/expected_outputs/expected_output_${test_name}.txt"
 
     # Ejecutar el programa con rutas de archivo de entrada y salida
-    TP4/bin/tp4 ${input_file} > ${output_file}
+    ./bin/tp4 ${input_file} > ${output_file}
 
     # Normalizar ambos archivos (limpieza de espacios, tabulaciones, etc)
-    sed -e 's/\t/ /g' -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' -e 's/[[:space:]]\{2,\}/ /g' -e '/^$/d' "$output_file" > "./TP4/tests/output_${test_name}_clean.txt"
-    sed -e 's/\t/ /g' -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' -e 's/[[:space:]]\{2,\}/ /g' -e '/^$/d' "$expected_output" > "./TP4/tests/expected_outputs/expected_output_${test_name}_clean.txt"
+    sed -e 's/\t/ /g' -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' -e 's/[[:space:]]\{2,\}/ /g' -e '/^$/d' "$output_file" > "./tests/output_${test_name}_clean.txt"
+    sed -e 's/\t/ /g' -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' -e 's/[[:space:]]\{2,\}/ /g' -e '/^$/d' "$expected_output" > "./tests/expected_outputs/expected_output_${test_name}_clean.txt"
 
     # Contar líneas en los archivos limpios
-    output_line_count=$(wc -l < "./TP4/tests/output_${test_name}_clean.txt")
-    expected_line_count=$(wc -l < "./TP4/tests/expected_outputs/expected_output_${test_name}_clean.txt")
+    output_line_count=$(wc -l < "./tests/output_${test_name}_clean.txt")
+    expected_line_count=$(wc -l < "./tests/expected_outputs/expected_output_${test_name}_clean.txt")
 
-    [ -n "$(tail -c 1 ./TP4/tests/output_${test_name}_clean.txt)" ] && echo "" >> ./TP4/tests/output_${test_name}_clean.txt
-    [ -n "$(tail -c 1 ./TP4/tests/expected_outputs/expected_output_${test_name}_clean.txt)" ] && echo "" >> ./TP4/tests/expected_outputs/expected_output_${test_name}_clean.txt
+    [ -n "$(tail -c 1 ./tests/output_${test_name}_clean.txt)" ] && echo "" >> ./tests/output_${test_name}_clean.txt
+    [ -n "$(tail -c 1 ./tests/expected_outputs/expected_output_${test_name}_clean.txt)" ] && echo "" >> ./tests/expected_outputs/expected_output_${test_name}_clean.txt
 
     # Usar diff para encontrar diferencias ignorando líneas vacías y normalizadas
-    diff_output=$(diff "./TP4/tests/output_${test_name}_clean.txt" "./TP4/tests/expected_outputs/expected_output_${test_name}_clean.txt" | grep -vE '^[0-9]+[acd][0-9]+$|^---$')
+    diff_output=$(diff "./tests/output_${test_name}_clean.txt" "./tests/expected_outputs/expected_output_${test_name}_clean.txt" | grep -vE '^[0-9]+[acd][0-9]+$|^---$')
 
     # Contar las líneas coincidentes del output de la ejecución respecto del esperado
     matching_lines=$((expected_line_count - $(echo "$diff_output" | grep -c '^>')))
@@ -58,7 +58,7 @@ for input_file in ./TP4/tests/test_*.i; do
 
     echo -e "\nDiferencias indicadas según colores de referencia: \n\033[32m  * Verde: Líneas faltantes en salida actual \033[0m\n\033[31m  * Rojo: Líneas adicionales en salida actual \033[0m\n\033[36m  * Cian: Líneas con diferencias entre salida actual y esperada\033[0m"
     echo -e "\nSalida de ejecución actual ${test_name} \t\t\t\tSalida esperada ${test_name}\n"
-    colordiff -y "./TP4/tests/output_${test_name}_clean.txt" "./TP4/tests/expected_outputs/expected_output_${test_name}_clean.txt"
+    colordiff -y "./tests/output_${test_name}_clean.txt" "./tests/expected_outputs/expected_output_${test_name}_clean.txt"
 
 done
 
@@ -87,5 +87,4 @@ fi
 if [ "$pass_tests" -ne 0 ]; then
     echo -e "\n\033[32mSe superaron los requerimientos de los test, puede continuarse con revisión de PR\033[0m\n"
     exit 0
-
 fi
