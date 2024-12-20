@@ -56,5 +56,5 @@ Este proyecto es un analizador **léxico, sintáctico y semántico** para el est
 - **Tomas Ignacio Ferreyra**   
   *GitHub*: [usuario](https://github.com/TomasIFerreyra)
 
-##**Make file**
+## **Make file**
 Este proyecto utiliza el Makefile de [**Fernando Daniel Maqueda**](https://github.com/fernandodanielmaqueda) para facilitar la construcción del proyecto.  
