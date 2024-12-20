@@ -39,7 +39,7 @@ Este proyecto es un analizador **léxico, sintáctico y semántico** para el est
 ## **Autores ✍️**
 
 - **Gonzalo Garcia Fontenla**    
-  *GitHub*: [usuario](https://github.com/GonGarciaFontenla))  
+  *GitHub*: [usuario](https://github.com/GonGarciaFontenla)  
 
 - **Leonel Contreras**   
   *GitHub*: [usuario](https://github.com/LeonelArianContreras)
