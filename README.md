@@ -44,16 +44,16 @@ Este proyecto es un analizador **léxico, sintáctico y semántico** para el est
 - **Leonel Contreras**   
   *GitHub*: [usuario](https://github.com/LeonelArianContreras)
 
-  - **Martin Federico Aguirre Ruiz**   
+- **Martin Federico Aguirre Ruiz**   
   *GitHub*: [usuario](https://github.com/martinAguirreRuiz)
 
 - **Ivan Jose Kociman**   
   *GitHub*: [usuario](https://github.com/ikociman)
 
-  - **Maria Vectoria Massaini**   
+- **Maria Vectoria Massaini**   
   *GitHub*: [usuario](https://github.com/victoriamass)
 
-  - **Tomas Ignacio Ferreyra**   
+- **Tomas Ignacio Ferreyra**   
   *GitHub*: [usuario](https://github.com/TomasIFerreyra)
 
 ##**Make file**
