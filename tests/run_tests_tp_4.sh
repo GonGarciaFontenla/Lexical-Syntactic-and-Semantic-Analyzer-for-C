@@ -88,3 +88,4 @@ if [ "$pass_tests" -ne 0 ]; then
     echo -e "\n\033[32mSe superaron los requerimientos de los test, puede continuarse con revisión de PR\033[0m\n"
     exit 0
 fi
+ 
