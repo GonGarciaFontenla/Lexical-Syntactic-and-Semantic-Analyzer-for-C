@@ -35,3 +35,26 @@ Este proyecto es un analizador **léxico, sintáctico y semántico** para el est
 ├── archivo.i         # Archivo de ejemplo (preprocesado)
 ├── GNUmakefile       # Script de compilación
 └── README.md         # Este archivo
+```
+## **Autores ✍️**
+
+- **Gonzalo Garcia Fontenla**    
+  *GitHub*: [usuario](https://github.com/GonGarciaFontenla))  
+
+- **Leonel Contreras**   
+  *GitHub*: [usuario](https://github.com/LeonelArianContreras)
+
+  - **Martin Federico Aguirre Ruiz**   
+  *GitHub*: [usuario](https://github.com/martinAguirreRuiz)
+
+- **Ivan Jose Kociman**   
+  *GitHub*: [usuario](https://github.com/ikociman)
+
+  - **Maria Vectoria Massaini**   
+  *GitHub*: [usuario](https://github.com/victoriamass)
+
+  - **Tomas Ignacio Ferreyra**   
+  *GitHub*: [usuario](https://github.com/TomasIFerreyra)
+
+##**Make file**
+Este proyecto utiliza el Makefile de [**Fernando Daniel Maqueda**](https://github.com/fernandodanielmaqueda) para facilitar la construcción del proyecto.  
