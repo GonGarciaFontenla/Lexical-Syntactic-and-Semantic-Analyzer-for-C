@@ -36,7 +36,7 @@ Este proyecto es un analizador **léxico, sintáctico y semántico** para el est
 ├── GNUmakefile       # Script de compilación
 └── README.md         # Este archivo
 ```
-## **Autores ✍️**
+## **Desarrolladores ✍️**
 
 - **Gonzalo Garcia Fontenla**    
   *GitHub*: [usuario](https://github.com/GonGarciaFontenla)  
